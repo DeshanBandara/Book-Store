@@ -1,8 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='bg-red-400 text-white'>App</div>
   )
 }
 
