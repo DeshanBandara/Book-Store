@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
 import axios from  'axios'
 import Spinner from '../components/Spinner'
@@ -12,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-    .get('http://localhost:5555/books')
+    .get(`http://localhost:5555/books`)
     .then((response) => {
       setBooks(response.data.data);
       setLoading(false);
@@ -36,16 +37,16 @@ const Home = () => {
         <table className='w-full border-separate border-spacing-2'>
           <thead>
             <tr>
-              <th className='boder border-slate-600 rounded-md'>No</th>
-              <th className='boder border-slate-600 rounded-md'>Title</th>
-              <th className='boder border-slate-600 rounded-md max-md:hidden'>Author</th>
-              <th className='boder border-slate-600 rounded-md max-md:hidden'>publish Year</th>
-              <th className='boder border-slate-600 rounded-md'>Operations</th>
+              <th className='border border-slate-600 rounded-md'>No</th>
+              <th className='border border-slate-600 rounded-md'>Title</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>Author</th>
+              <th className='border border-slate-600 rounded-md max-md:hidden'>publish Year</th>
+              <th className='border border-slate-600 rounded-md'>Operations</th>
             </tr>
           </thead>
           <tbody>
             {books.map((book, index) => (
-              <tr key={book._id} className='h-8'>
+              <tr key={book.id} className='h-8'>
                 <td className='border border-slate-700 rounded-md text-center'>
                   {index + 1}
                 </td>
@@ -72,7 +73,7 @@ const Home = () => {
                   </div>
                 </td>
               </tr>
-            ))}
+            ))};
           </tbody>
         </table>
       )}
