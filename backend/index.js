@@ -2,6 +2,7 @@ import express, { request, response } from "express";
 import { PORT, mongoDBURL} from "./config.js";
 import mongoose from 'mongoose';
 import { Book } from './models/bookModel.js';
+import booksRoutes from './routes/booksRoutes.js'
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.get('/', (request, response) => {
     return response.status(234).send(`Welcome to Book Shop`)
 });
 
-
+app.use(`/books`, booksRoutes);
 
 mongoose
     .connect(mongoDBURL)
