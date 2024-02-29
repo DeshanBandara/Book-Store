@@ -10,7 +10,7 @@ Welcome to the Fullstack Book Store App! This application allows users to store 
       + React: A JavaScript library for building user interfaces.
       + Vite: A fast-build tool for modern web development.
       + Tailwind CSS: A utility-first CSS framework.
-  * ## Backend
+  * ## Backend:
       + Express: A minimal and flexible Node.js web application framework.
       + Node.js: A JavaScript runtime for server-side development.
       + MongoDB: A NoSQL database for storing application data.
