@@ -25,7 +25,7 @@ const EditBooks = () => {
       alert('An Error happened. pleace cheack console');
       console.log(error);
     })
-  }, [])
+  }, [id])
   const handleEditBook = () => {
     const data = {
       title,

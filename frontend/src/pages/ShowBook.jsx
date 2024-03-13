@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
@@ -22,7 +23,7 @@ const ShowBook = () => {
       console.log(error);
       setLoading(false);
     });
-  }, [])
+  }, [id])
   return (
     <div className='p-4'>
       <BackButton />
